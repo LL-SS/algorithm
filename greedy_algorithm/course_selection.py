@@ -1,11 +1,18 @@
 def course_selection(course_list):
     # 코드를 작성하세요.
-    selected_list = []
+    answer_list = []
 
-    for course in course_list:
-        start, end = course[0], course[1]
+    course_list.sort(key=lambda x: (x[1], x[0]))
 
-        for
+    answer_list.append(course_list[0])
+    start_time = course_list[0][1]
+
+    for i in range(1, len(course_list)):
+        if start_time < course_list[i][0]:
+            answer_list.append(course_list[i])
+            start_time = course_list[i][1]
+
+    return answer_list
 
 
 # 테스트
