@@ -7,7 +7,7 @@ n, length, price = inputs[0][0], inputs[1], inputs[2]
 i = 0
 ans = 0
 
-while i < n:
+while i < n - 1:
     to_end = price[i] * sum(length[i:])
     each = 0
 
